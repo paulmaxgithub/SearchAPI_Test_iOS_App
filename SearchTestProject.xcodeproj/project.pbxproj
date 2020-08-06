@@ -13,6 +13,11 @@
 		632ED60724DB4EAB00CDBF0B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 632ED60524DB4EAB00CDBF0B /* Main.storyboard */; };
 		632ED60924DB4EB000CDBF0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 632ED60824DB4EB000CDBF0B /* Assets.xcassets */; };
 		632ED60C24DB4EB000CDBF0B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 632ED60A24DB4EB000CDBF0B /* LaunchScreen.storyboard */; };
+		632ED61624DB5FD600CDBF0B /* segmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632ED61524DB5FD600CDBF0B /* segmentedControl.swift */; };
+		632ED61924DBE48D00CDBF0B /* iTunesSearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632ED61824DBE48D00CDBF0B /* iTunesSearchResult.swift */; };
+		632ED61B24DBE4A400CDBF0B /* GitHubSearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632ED61A24DBE4A400CDBF0B /* GitHubSearchResult.swift */; };
+		632ED61E24DBE9EF00CDBF0B /* CustomTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632ED61D24DBE9EF00CDBF0B /* CustomTableView.swift */; };
+		632ED62024DBF55000CDBF0B /* CustomSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632ED61F24DBF55000CDBF0B /* CustomSearchBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		632ED60824DB4EB000CDBF0B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		632ED60B24DB4EB000CDBF0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		632ED60D24DB4EB000CDBF0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		632ED61524DB5FD600CDBF0B /* segmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = segmentedControl.swift; sourceTree = "<group>"; };
+		632ED61824DBE48D00CDBF0B /* iTunesSearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesSearchResult.swift; sourceTree = "<group>"; };
+		632ED61A24DBE4A400CDBF0B /* GitHubSearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubSearchResult.swift; sourceTree = "<group>"; };
+		632ED61D24DBE9EF00CDBF0B /* CustomTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableView.swift; sourceTree = "<group>"; };
+		632ED61F24DBF55000CDBF0B /* CustomSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSearchBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +68,42 @@
 			children = (
 				632ED5FF24DB4EAB00CDBF0B /* AppDelegate.swift */,
 				632ED60124DB4EAB00CDBF0B /* SceneDelegate.swift */,
-				632ED60324DB4EAB00CDBF0B /* ViewController.swift */,
+				632ED61C24DBE4AA00CDBF0B /* Model */,
+				632ED61724DB60F600CDBF0B /* ViewControllers */,
+				632ED61324DB5E0E00CDBF0B /* Extension */,
 				632ED60524DB4EAB00CDBF0B /* Main.storyboard */,
 				632ED60824DB4EB000CDBF0B /* Assets.xcassets */,
 				632ED60A24DB4EB000CDBF0B /* LaunchScreen.storyboard */,
 				632ED60D24DB4EB000CDBF0B /* Info.plist */,
 			);
 			path = SearchTestProject;
+			sourceTree = "<group>";
+		};
+		632ED61324DB5E0E00CDBF0B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				632ED61524DB5FD600CDBF0B /* segmentedControl.swift */,
+				632ED61F24DBF55000CDBF0B /* CustomSearchBar.swift */,
+				632ED61D24DBE9EF00CDBF0B /* CustomTableView.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		632ED61724DB60F600CDBF0B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				632ED60324DB4EAB00CDBF0B /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		632ED61C24DBE4AA00CDBF0B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				632ED61824DBE48D00CDBF0B /* iTunesSearchResult.swift */,
+				632ED61A24DBE4A400CDBF0B /* GitHubSearchResult.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,7 +178,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				632ED60424DB4EAB00CDBF0B /* ViewController.swift in Sources */,
+				632ED61B24DBE4A400CDBF0B /* GitHubSearchResult.swift in Sources */,
+				632ED61924DBE48D00CDBF0B /* iTunesSearchResult.swift in Sources */,
 				632ED60024DB4EAB00CDBF0B /* AppDelegate.swift in Sources */,
+				632ED61E24DBE9EF00CDBF0B /* CustomTableView.swift in Sources */,
+				632ED61624DB5FD600CDBF0B /* segmentedControl.swift in Sources */,
+				632ED62024DBF55000CDBF0B /* CustomSearchBar.swift in Sources */,
 				632ED60224DB4EAB00CDBF0B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
