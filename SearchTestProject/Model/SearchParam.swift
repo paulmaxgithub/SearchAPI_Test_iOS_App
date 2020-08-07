@@ -1,5 +1,5 @@
 //
-//  iTunesSearchResult.swift
+//  SearchParam.swift
 //  SearchTestProject
 //
 //  Created by Paul Max on 8/6/20.
@@ -8,7 +8,12 @@
 
 import Foundation
 
-// TODO: -
+struct GitHubSearchResult: Codable {
+    
+    var company_logo:   String?
+    var company:          String?
+    var company_url:    String?
+}
 
 struct ITunesListResult: Codable {
     

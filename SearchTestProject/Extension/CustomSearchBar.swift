@@ -10,16 +10,18 @@ import UIKit
 
 extension ViewController: UISearchBarDelegate {
     
-        //MARK: - SEARCH BAR (logic)
-    func searchBar(_ searchBar: UISearchBar, tableView: UITableView, textDidChange searchText: String) {
-               guard !searchText.isEmpty else {
-                   currentSearchResult = iTunesSearchResult
-                   tableView.reloadData()
-                   return
-               }
-               currentSearchResult = iTunesSearchResult.filter({ iTunesSearchResult -> Bool in
-                   return iTunesSearchResult.name.lowercased().contains(searchText.lowercased())
-               })
-               tableView.reloadData()
-           }
+    //MARK: - SEARCH BAR (logic)
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        guard !searchText.isEmpty else {
+            currentList = gitHubSearchResult
+            tableView.reloadData()
+            return
+        }
+        
+        currentList = gitHubSearchResult.filter({ gitHubSearchResult -> Bool in
+            return gitHubSearchResult.company!.lowercased().contains(searchText.lowercased())
+        })
+        tableView.reloadData()
+    }
 }

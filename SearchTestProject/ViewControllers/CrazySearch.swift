@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  CrazySearch.swift
 //  SearchTestProject
 //
 //  Created by Paul Max on 8/5/20.
@@ -9,18 +9,27 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    var iTunesSearchResult: [ITunesListResult] = []
-    var gitHubSearchResult: [GitHubListResult] = []
-    var currentSearchResult: [ITunesListResult] = []
+    
+    var url = ""
+    
+    var gitHubSearchResult: [GitHubSearchResult] = []
+    var currentList:        [GitHubSearchResult] = []
     
     @IBOutlet var searchBar: UISearchBar!
+    @IBOutlet var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         searchBar.delegate = self
+        tableView.delegate = self
+        tableView.dataSource = self
+        
         addSegmentedControl()
+    }
+    
+    func load() {
+        
     }
 }
 

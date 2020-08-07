@@ -8,15 +8,17 @@
 
 import UIKit
 
-extension ViewController: UITableViewDelegate, UITableViewDataSource {
+extension ViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3//currentSearchResult.count
+        return gitHubSearchResult.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        //cell.textLabel?.text = capitalize(text: currentSearchResult[indexPath.row].name)
+        cell.textLabel?.text = capitalize(text: currentList[indexPath.row].company!)
+        cell.detailTextLabel?.text = currentList[indexPath.row].company_url
+        //cell.imageView?.image = currentList[indexPath.row].
         return cell
     }
     
