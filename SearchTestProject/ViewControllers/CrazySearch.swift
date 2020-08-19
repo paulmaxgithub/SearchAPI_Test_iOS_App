@@ -8,12 +8,16 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class CrazySearch: UIViewController {
     
-    var url = ""
+    //var gitHubSearchResult: [GitHubSearchResult] = []
+    var iTunesSearchResult: [ITunesSearchResult] = []
     
-    var gitHubSearchResult: [GitHubSearchResult] = []
-    var currentList:        [GitHubSearchResult] = []
+    var searchObject = ""
+    var searchBarIsEmpty: Bool {
+        guard let text = searchBar.text else { return false }
+        return text.isEmpty
+    }
     
     @IBOutlet var searchBar: UISearchBar!
     @IBOutlet var tableView: UITableView!
@@ -25,11 +29,36 @@ class ViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
-        addSegmentedControl()
+        addSegmentedControl() // UISegmentedControl to NavigationController
     }
     
-    func load() {
+    func loadArtistDiscography() {
         
+        if !searchBarIsEmpty {
+            
+            var search = searchBar.text
+            
+            //check and replace white spaces with plus in astring
+            if search!.hasWhiteSpace && search?.first != " " && search?.last != " " {
+                search = searchBar.text?.replacingOccurrences(of: " ", with: "+")
+            }
+            
+            
+            guard let url = URL(string: searchObject + search!) else { return }
+            
+            URLSession.shared.dataTask(with: url) { (data, response, error) in
+                guard let data = data else { return }
+                
+                do {
+                    let info = try JSONDecoder().decode(ITunesResults.self, from: data)
+                    self.iTunesSearchResult = info.results
+                    
+                    DispatchQueue.main.async {
+                        self.tableView.reloadData()
+                    }
+                } catch let error { print (error) }
+            }.resume()
+        }
     }
 }
 

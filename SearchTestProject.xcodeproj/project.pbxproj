@@ -13,10 +13,12 @@
 		632ED60724DB4EAB00CDBF0B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 632ED60524DB4EAB00CDBF0B /* Main.storyboard */; };
 		632ED60924DB4EB000CDBF0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 632ED60824DB4EB000CDBF0B /* Assets.xcassets */; };
 		632ED60C24DB4EB000CDBF0B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 632ED60A24DB4EB000CDBF0B /* LaunchScreen.storyboard */; };
-		632ED61624DB5FD600CDBF0B /* SegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632ED61524DB5FD600CDBF0B /* SegmentedControl.swift */; };
-		632ED61B24DBE4A400CDBF0B /* SearchParam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632ED61A24DBE4A400CDBF0B /* SearchParam.swift */; };
-		632ED61E24DBE9EF00CDBF0B /* CustomTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632ED61D24DBE9EF00CDBF0B /* CustomTableView.swift */; };
-		632ED62024DBF55000CDBF0B /* CustomSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632ED61F24DBF55000CDBF0B /* CustomSearchBar.swift */; };
+		632ED61624DB5FD600CDBF0B /* AddSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632ED61524DB5FD600CDBF0B /* AddSegmentedControl.swift */; };
+		632ED61B24DBE4A400CDBF0B /* SearchModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632ED61A24DBE4A400CDBF0B /* SearchModels.swift */; };
+		632ED61E24DBE9EF00CDBF0B /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632ED61D24DBE9EF00CDBF0B /* TableView.swift */; };
+		632ED62024DBF55000CDBF0B /* UISearchBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632ED61F24DBF55000CDBF0B /* UISearchBarDelegate.swift */; };
+		63932E4624EC3BE300381A19 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63932E4524EC3BE300381A19 /* String.swift */; };
+		63932E4B24ED33D200381A19 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63932E4A24ED33D200381A19 /* UIImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,10 +30,12 @@
 		632ED60824DB4EB000CDBF0B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		632ED60B24DB4EB000CDBF0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		632ED60D24DB4EB000CDBF0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		632ED61524DB5FD600CDBF0B /* SegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControl.swift; sourceTree = "<group>"; };
-		632ED61A24DBE4A400CDBF0B /* SearchParam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchParam.swift; sourceTree = "<group>"; };
-		632ED61D24DBE9EF00CDBF0B /* CustomTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableView.swift; sourceTree = "<group>"; };
-		632ED61F24DBF55000CDBF0B /* CustomSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSearchBar.swift; sourceTree = "<group>"; };
+		632ED61524DB5FD600CDBF0B /* AddSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSegmentedControl.swift; sourceTree = "<group>"; };
+		632ED61A24DBE4A400CDBF0B /* SearchModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchModels.swift; sourceTree = "<group>"; };
+		632ED61D24DBE9EF00CDBF0B /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
+		632ED61F24DBF55000CDBF0B /* UISearchBarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISearchBarDelegate.swift; sourceTree = "<group>"; };
+		63932E4524EC3BE300381A19 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		63932E4A24ED33D200381A19 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,9 +84,11 @@
 		632ED61324DB5E0E00CDBF0B /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				632ED61524DB5FD600CDBF0B /* SegmentedControl.swift */,
-				632ED61F24DBF55000CDBF0B /* CustomSearchBar.swift */,
-				632ED61D24DBE9EF00CDBF0B /* CustomTableView.swift */,
+				632ED61524DB5FD600CDBF0B /* AddSegmentedControl.swift */,
+				632ED61F24DBF55000CDBF0B /* UISearchBarDelegate.swift */,
+				632ED61D24DBE9EF00CDBF0B /* TableView.swift */,
+				63932E4524EC3BE300381A19 /* String.swift */,
+				63932E4A24ED33D200381A19 /* UIImage.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -98,7 +104,7 @@
 		632ED61C24DBE4AA00CDBF0B /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				632ED61A24DBE4A400CDBF0B /* SearchParam.swift */,
+				632ED61A24DBE4A400CDBF0B /* SearchModels.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -174,12 +180,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63932E4B24ED33D200381A19 /* UIImage.swift in Sources */,
 				632ED60424DB4EAB00CDBF0B /* CrazySearch.swift in Sources */,
-				632ED61B24DBE4A400CDBF0B /* SearchParam.swift in Sources */,
+				632ED61B24DBE4A400CDBF0B /* SearchModels.swift in Sources */,
 				632ED60024DB4EAB00CDBF0B /* AppDelegate.swift in Sources */,
-				632ED61E24DBE9EF00CDBF0B /* CustomTableView.swift in Sources */,
-				632ED61624DB5FD600CDBF0B /* SegmentedControl.swift in Sources */,
-				632ED62024DBF55000CDBF0B /* CustomSearchBar.swift in Sources */,
+				632ED61E24DBE9EF00CDBF0B /* TableView.swift in Sources */,
+				632ED61624DB5FD600CDBF0B /* AddSegmentedControl.swift in Sources */,
+				632ED62024DBF55000CDBF0B /* UISearchBarDelegate.swift in Sources */,
+				63932E4624EC3BE300381A19 /* String.swift in Sources */,
 				632ED60224DB4EAB00CDBF0B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
